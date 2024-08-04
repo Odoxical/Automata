@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cep2eh2vi3mhh"]
+[gd_scene load_steps=9 format=3 uid="uid://cep2eh2vi3mhh"]
 
-[ext_resource type="Script" path="res://Map.gd" id="1_47ir7"]
+[ext_resource type="Script" path="res://basic_tower.gd" id="1_koxu6"]
 [ext_resource type="Texture2D" uid="uid://born7ajptswgu" path="res://Diceforce_assets/Tiles/Tiles.png" id="1_wwayy"]
 [ext_resource type="PackedScene" uid="uid://dcxodahotd8ac" path="res://Easy_Enemy.tscn" id="3_awxaa"]
 [ext_resource type="Script" path="res://Enemy Spawner.gd" id="4_e3tx0"]
+[ext_resource type="PackedScene" uid="uid://bfnywss77sb3u" path="res://basic_tower.tscn" id="5_7onpd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_64s11"]
 texture = ExtResource("1_wwayy")
@@ -359,7 +360,7 @@ _data = {
 point_count = 16
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_47ir7")
+script = ExtResource("1_koxu6")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7smud")
@@ -378,11 +379,14 @@ position = Vector2(-224.958, 6)
 progress = 0.08
 loop = false
 
-[node name="Easy_Enemy" parent="Path/PathFollow2D" instance=ExtResource("3_awxaa")]
+[node name="Easy_Enemy" parent="Path/PathFollow2D" groups=["Enemy"] instance=ExtResource("3_awxaa")]
 
 [node name="Enemy Spawner" type="Node2D" parent="Path/PathFollow2D"]
 script = ExtResource("4_e3tx0")
 
 [node name="Timer" type="Timer" parent="Path/PathFollow2D/Enemy Spawner"]
+
+[node name="BasicTower" parent="." instance=ExtResource("5_7onpd")]
+position = Vector2(73, -87)
 
 [connection signal="timeout" from="Path/PathFollow2D/Enemy Spawner/Timer" to="Path/PathFollow2D/Enemy Spawner" method="_on_timer_timeout"]
