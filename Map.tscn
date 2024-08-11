@@ -381,12 +381,12 @@ loop = false
 
 [node name="Easy_Enemy" parent="Path/PathFollow2D" groups=["Enemy"] instance=ExtResource("3_awxaa")]
 
-[node name="Enemy Spawner" type="Node2D" parent="Path/PathFollow2D"]
+[node name="EnemySpawner" type="Node2D" parent="Path/PathFollow2D" groups=["EnemySpawner"]]
 script = ExtResource("4_e3tx0")
 
-[node name="Timer" type="Timer" parent="Path/PathFollow2D/Enemy Spawner"]
+[node name="Timer" type="Timer" parent="Path/PathFollow2D/EnemySpawner"]
 
 [node name="BasicTower" parent="." instance=ExtResource("5_7onpd")]
 position = Vector2(73, -87)
 
-[connection signal="timeout" from="Path/PathFollow2D/Enemy Spawner/Timer" to="Path/PathFollow2D/Enemy Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Path/PathFollow2D/EnemySpawner/Timer" to="Path/PathFollow2D/EnemySpawner" method="_on_timer_timeout"]
