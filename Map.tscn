@@ -374,19 +374,27 @@ zoom = Vector2(2.15, 2.4)
 [node name="Path" type="Path2D" parent="."]
 curve = SubResource("Curve2D_6uowp")
 
+[node name="EnemySpawner" type="Node2D" parent="Path" groups=["EnemySpawner"]]
+position = Vector2(-224.958, 6)
+script = ExtResource("4_e3tx0")
+
+[node name="Timer" type="Timer" parent="Path/EnemySpawner"]
+
 [node name="PathFollow2D" type="PathFollow2D" parent="Path"]
 position = Vector2(-224.958, 6)
 progress = 0.08
 loop = false
 
-[node name="Easy_Enemy" parent="Path/PathFollow2D" groups=["Enemy"] instance=ExtResource("3_awxaa")]
+[node name="Easy_Enemy" parent="Path/PathFollow2D" instance=ExtResource("3_awxaa")]
 
-[node name="EnemySpawner" type="Node2D" parent="Path/PathFollow2D" groups=["EnemySpawner"]]
-script = ExtResource("4_e3tx0")
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path"]
+position = Vector2(-145.193, 6)
+progress = 79.81
+loop = false
 
-[node name="Timer" type="Timer" parent="Path/PathFollow2D/EnemySpawner"]
+[node name="Easy_Enemy" parent="Path/PathFollow2D2" instance=ExtResource("3_awxaa")]
 
 [node name="BasicTower" parent="." instance=ExtResource("5_7onpd")]
-position = Vector2(73, -87)
+position = Vector2(72, -88)
 
-[connection signal="timeout" from="Path/PathFollow2D/EnemySpawner/Timer" to="Path/PathFollow2D/EnemySpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Path/EnemySpawner/Timer" to="Path/EnemySpawner" method="_on_timer_timeout"]
