@@ -370,7 +370,7 @@ layer_0/tile_data = PackedInt32Array(65522, 458752, 2, 65523, 458752, 2, 65516, 
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(247, -16)
-zoom = Vector2(2.15, 2.4)
+zoom = Vector2(1.71, 2)
 
 [node name="Path" type="Path2D" parent="."]
 curve = SubResource("Curve2D_6uowp")
@@ -404,8 +404,5 @@ position = Vector2(360, 8)
 position = Vector2(72, -88)
 
 [node name="Ui" parent="." instance=ExtResource("6_is27e")]
-offset = Vector2(525, 150)
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 525, 150)
 
 [connection signal="timeout" from="Path/EnemySpawner/Timer" to="Path/EnemySpawner" method="_on_timer_timeout"]

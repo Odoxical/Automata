@@ -5,14 +5,13 @@
 
 [node name="Plasma_Button" type="Panel"]
 custom_minimum_size = Vector2(40, 40)
-offset_right = 45.0
-offset_bottom = 45.0
-scale = Vector2(0.25, 0.25)
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_7kvo6")
 
 [node name="PlasmaCannon" type="Sprite2D" parent="."]
-position = Vector2(22, 22)
-scale = Vector2(1.23, 1.25)
+position = Vector2(20, 20)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_6lq3y")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
