@@ -1,14 +1,15 @@
 extends Node2D
 
 var BULLET = preload("res://plasma_bullet.tscn")
-var bullet_damage = 5
+var bullet_damage = 50
 var path_name
 var current_targets = [] #targets in range
 var current #curently attacking
 @onready var shoot_timer: Timer = $ShootTimer
 
 func _on_tower_body_exited(body):
-	pass # Replace with function body.
+		if current == body:
+			current = null
 
 func _on_tower_body_entered(body):
 	if body.is_in_group("Enemy"):

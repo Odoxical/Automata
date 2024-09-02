@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bac6h45q8sef"]
+
+[ext_resource type="Texture2D" uid="uid://vbb74ytfd6qp" path="res://Diceforce_assets/Dices and Objects/Plasma_Cannon.png" id="1_6lq3y"]
+[ext_resource type="Script" path="res://plasma_cannon_button.gd" id="1_7kvo6"]
+
+[node name="Plasma_Button" type="Panel"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 45.0
+offset_bottom = 45.0
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_7kvo6")
+
+[node name="PlasmaCannon" type="Sprite2D" parent="."]
+position = Vector2(22, 22)
+scale = Vector2(1.23, 1.25)
+texture = ExtResource("1_6lq3y")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

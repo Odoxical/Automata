@@ -3,7 +3,7 @@ extends Area2D
 var target
 var speed = 1000
 var path_name = ""
-var bullet_damage
+var bullet_damage = 50
 #@onready var EnemySpawnerNode = get_tree().get_first_node_in_group("EnemySpawner")
 #get_first_node_in_group("EnemySpawner")
 func _physics_process(delta):

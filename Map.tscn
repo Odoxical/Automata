@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cep2eh2vi3mhh"]
+[gd_scene load_steps=10 format=3 uid="uid://cep2eh2vi3mhh"]
 
 [ext_resource type="Script" path="res://basic_tower.gd" id="1_koxu6"]
 [ext_resource type="Texture2D" uid="uid://born7ajptswgu" path="res://Diceforce_assets/Tiles/Tiles.png" id="1_wwayy"]
 [ext_resource type="PackedScene" uid="uid://dcxodahotd8ac" path="res://Easy_Enemy.tscn" id="3_awxaa"]
 [ext_resource type="Script" path="res://Enemy Spawner.gd" id="4_e3tx0"]
 [ext_resource type="PackedScene" uid="uid://bfnywss77sb3u" path="res://basic_tower.tscn" id="5_7onpd"]
+[ext_resource type="PackedScene" uid="uid://bgtekx7n5piwb" path="res://Ui.tscn" id="6_is27e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_64s11"]
 texture = ExtResource("1_wwayy")
@@ -355,9 +356,9 @@ sources/0 = SubResource("TileSetAtlasSource_64s11")
 
 [sub_resource type="Curve2D" id="Curve2D_6uowp"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -225, 6, 0, 0, 0, 0, 40, 6, 0, 0, 0, 0, 40, -120, 0, 0, 0, 0, 135, -120, 0, 0, 0, 0, 135, 120, 0, 0, 0, 0, 325, 120, 0, 0, 0, 0, 325, -25, 0, 0, 0, 0, 390, -25, 0, 0, 0, 0, 390, 40, 0, 0, 0, 0, 366, 40, 0, 0, 0, 0, 360, 46, 0, 0, 0, 0, 361, 113, 0, 0, 0, 0, 365, 120, 0, 0, 0, 0, 425, 120, 0, 0, 0, 0, 425, 10, 0, 0, 0, 0, 730, 10)
+"points": PackedVector2Array(0, 0, 0, 0, -225, 6, 0, 0, 0, 0, -146, 9, 0, 0, 0, 0, 40, 6, 0, 0, 0, 0, 40, -120, 0, 0, 0, 0, 135, -120, 0, 0, 0, 0, 135, 120, 0, 0, 0, 0, 325, 120, 0, 0, 0, 0, 325, -25, 0, 0, 0, 0, 390, -25, 0, 0, 0, 0, 390, 40, 0, 0, 0, 0, 366, 40, 0, 0, 0, 0, 360, 46, 0, 0, 0, 0, 361, 113, 0, 0, 0, 0, 365, 120, 0, 0, 0, 0, 425, 120, 0, 0, 0, 0, 425, 10, 0, 0, 0, 0, 730, 10)
 }
-point_count = 16
+point_count = 17
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_koxu6")
@@ -381,20 +382,30 @@ script = ExtResource("4_e3tx0")
 [node name="Timer" type="Timer" parent="Path/EnemySpawner"]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path"]
-position = Vector2(-224.958, 6)
+position = Vector2(-224.958, 6.00158)
+rotation = 0.0379564
 progress = 0.08
 loop = false
 
 [node name="Easy_Enemy" parent="Path/PathFollow2D" instance=ExtResource("3_awxaa")]
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Path"]
-position = Vector2(-145.193, 6)
+position = Vector2(-145.168, 9.00012)
+rotation = 0.0184611
 progress = 79.81
 loop = false
 
 [node name="Easy_Enemy" parent="Path/PathFollow2D2" instance=ExtResource("3_awxaa")]
 
+[node name="BasicTower2" parent="." instance=ExtResource("5_7onpd")]
+position = Vector2(360, 8)
+
 [node name="BasicTower" parent="." instance=ExtResource("5_7onpd")]
 position = Vector2(72, -88)
+
+[node name="Ui" parent="." instance=ExtResource("6_is27e")]
+offset = Vector2(525, 150)
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 525, 150)
 
 [connection signal="timeout" from="Path/EnemySpawner/Timer" to="Path/EnemySpawner" method="_on_timer_timeout"]

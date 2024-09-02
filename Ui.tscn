@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgtekx7n5piwb"]
+
+[ext_resource type="Texture2D" uid="uid://ot832vf2y3xf" path="res://Diceforce_assets/Tiles/UI_board-Sheet.png" id="1_e87gl"]
+[ext_resource type="PackedScene" uid="uid://bxlr73143154b" path="res://plasma_cannonButton.tscn" id="2_tn884"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="UiBoard-sheet" type="Sprite2D" parent="."]
+position = Vector2(-5.53992, -1.37699)
+scale = Vector2(2.242, 2.242)
+texture = ExtResource("1_e87gl")
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+offset_left = -259.0
+offset_top = -31.0
+offset_right = -117.0
+offset_bottom = 14.0
+scale = Vector2(1.5, 1.5)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="Panel2" parent="FlowContainer" instance=ExtResource("2_tn884")]
+layout_mode = 2

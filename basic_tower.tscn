@@ -30,7 +30,6 @@ shape = SubResource("CircleShape2D_rs35s")
 [node name="bulletcontainer" type="Node" parent="."]
 
 [node name="ShootTimer" type="Timer" parent="."]
-wait_time = 0.2
 one_shot = true
 
 [connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
