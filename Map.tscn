@@ -361,6 +361,7 @@ _data = {
 point_count = 17
 
 [node name="World" type="Node2D"]
+position = Vector2(200, 231)
 script = ExtResource("1_koxu6")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -380,6 +381,7 @@ position = Vector2(-224.958, 6)
 script = ExtResource("4_e3tx0")
 
 [node name="Timer" type="Timer" parent="Path/EnemySpawner"]
+autostart = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path"]
 position = Vector2(-224.958, 6.00158)
@@ -397,12 +399,14 @@ loop = false
 
 [node name="Easy_Enemy" parent="Path/PathFollow2D2" instance=ExtResource("3_awxaa")]
 
-[node name="BasicTower2" parent="." instance=ExtResource("5_7onpd")]
-position = Vector2(360, 8)
+[node name="Ui" parent="." instance=ExtResource("6_is27e")]
 
-[node name="BasicTower" parent="." instance=ExtResource("5_7onpd")]
+[node name="Towers" type="Node2D" parent="."]
+
+[node name="BasicTower" parent="Towers" instance=ExtResource("5_7onpd")]
 position = Vector2(72, -88)
 
-[node name="Ui" parent="." instance=ExtResource("6_is27e")]
+[node name="BasicTower2" parent="Towers" instance=ExtResource("5_7onpd")]
+position = Vector2(360, 8)
 
 [connection signal="timeout" from="Path/EnemySpawner/Timer" to="Path/EnemySpawner" method="_on_timer_timeout"]

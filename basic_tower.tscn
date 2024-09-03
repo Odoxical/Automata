@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfnywss77sb3u"]
+[gd_scene load_steps=6 format=3 uid="uid://bfnywss77sb3u"]
 
 [ext_resource type="Script" path="res://basic_tower.gd" id="1_ryqvh"]
 [ext_resource type="Texture2D" uid="uid://dplr5hevthw3w" path="res://Towers/Custom Sprites/Plasma_Cannon.png" id="1_yrnon"]
@@ -8,6 +8,14 @@ size = Vector2(32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rs35s"]
 radius = 128.25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnqg8"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 999
+corner_radius_top_right = 999
+corner_radius_bottom_right = 999
+corner_radius_bottom_left = 999
+corner_detail = 10
 
 [node name="BasicTower" type="StaticBody2D"]
 script = ExtResource("1_ryqvh")
@@ -31,6 +39,16 @@ shape = SubResource("CircleShape2D_rs35s")
 
 [node name="ShootTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Area" type="Panel" parent="."]
+modulate = Color(0, 0, 0.313726, 1)
+self_modulate = Color(0, 0, 0, 0.313726)
+show_behind_parent = true
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qnqg8")
 
 [connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
 [connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]

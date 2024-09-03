@@ -9,6 +9,7 @@ _data = {
 point_count = 16
 
 [node name="Path" type="Path2D"]
+position = Vector2(444, 231)
 curve = SubResource("Curve2D_6uowp")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
