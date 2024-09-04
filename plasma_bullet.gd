@@ -4,6 +4,7 @@ var target
 var speed = 1000
 var path_name = ""
 var bullet_damage = 50
+var pierce = 2
 #@onready var EnemySpawnerNode = get_tree().get_first_node_in_group("EnemySpawner")
 #get_first_node_in_group("EnemySpawner")
 func _physics_process(delta):
@@ -22,4 +23,3 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("Enemy"):
 		body.health -= bullet_damage
 		queue_free()
-		
