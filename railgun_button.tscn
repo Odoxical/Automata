@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c145t4doig6vo"]
+
+[ext_resource type="Script" path="res://railgun_button.gd" id="1_rg6w8"]
+[ext_resource type="Texture2D" uid="uid://dds2vguox53kf" path="res://Towers/Custom Sprites/Railgun _tower.png" id="2_onjea"]
+
+[node name="Railgun_Button" type="Panel"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_rg6w8")
+
+[node name="RailgunTower" type="Sprite2D" parent="."]
+position = Vector2(20, 20)
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("2_onjea")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://mf0ahg6yp34t"]
+
+[ext_resource type="Script" path="res://railgun_bullet.gd" id="1_xom3m"]
+[ext_resource type="Texture2D" uid="uid://bqk8ywn5pe2e0" path="res://Towers/Custom Sprites/Railgun_bullet.png" id="2_0pxak"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbvce"]
+radius = 6.0
+height = 24.0
+
+[node name="Railgun Bullet" type="Area2D" groups=["Bullet"]]
+script = ExtResource("1_xom3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dbvce")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Bullet"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dbvce")
+
+[node name="RailgunBullet" type="Sprite2D" parent="." groups=["Bullet"]]
+position = Vector2(-1, 0)
+texture = ExtResource("2_0pxak")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

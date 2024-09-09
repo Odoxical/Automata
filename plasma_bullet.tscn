@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbvce"]
 radius = 6.0
-height = 16.0
+height = 14.0
 
 [node name="Plasma Bullet" type="Area2D" groups=["Bullet"]]
 script = ExtResource("1_dnt1f")

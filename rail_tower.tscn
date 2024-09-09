@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://deudovnpoj6uq"]
+
+[ext_resource type="Script" path="res://rail_tower.gd" id="1_cinqb"]
+[ext_resource type="Texture2D" uid="uid://dds2vguox53kf" path="res://Towers/Custom Sprites/Railgun _tower.png" id="2_dhlfc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74pgj"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rs35s"]
+radius = 194.312
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd1qy"]
+bg_color = Color(0, 0, 0, 0.2)
+corner_radius_top_left = 235
+corner_radius_top_right = 235
+corner_radius_bottom_right = 235
+corner_radius_bottom_left = 235
+
+[node name="RailTower" type="StaticBody2D"]
+script = ExtResource("1_cinqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_74pgj")
+
+[node name="RailgunTower" type="Sprite2D" parent="."]
+texture = ExtResource("2_dhlfc")
+
+[node name="Aim" type="Marker2D" parent="."]
+position = Vector2(8, 0)
+
+[node name="Tower" type="Area2D" parent="." groups=["Tower"]]
+
+[node name="Range" type="CollisionShape2D" parent="Tower"]
+shape = SubResource("CircleShape2D_rs35s")
+
+[node name="bulletcontainer" type="Node" parent="."]
+
+[node name="ShootTimer" type="Timer" parent="." groups=["Tower"]]
+wait_time = 5.0
+one_shot = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -195.0
+offset_top = -195.0
+offset_right = 195.0
+offset_bottom = 195.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yd1qy")
+
+[connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
+[connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
