@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://cep2eh2vi3mhh"]
+[gd_scene load_steps=11 format=3 uid="uid://cep2eh2vi3mhh"]
 
-[ext_resource type="Script" path="res://map.gd" id="1_47n06"]
 [ext_resource type="Texture2D" uid="uid://cv0dm2csf34k8" path="res://Diceforce_assets/Tiles/Tiles+Corner.png" id="2_okl61"]
 [ext_resource type="PackedScene" uid="uid://dcxodahotd8ac" path="res://Easy_Enemy.tscn" id="3_awxaa"]
 [ext_resource type="Script" path="res://Enemy Spawner.gd" id="4_e3tx0"]
@@ -350,8 +349,7 @@ point_count = 13
 [sub_resource type="LabelSettings" id="LabelSettings_ttvbq"]
 font = ExtResource("6_kwed8")
 
-[node name="World" type="Node2D"]
-script = ExtResource("1_47n06")
+[node name="Map" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(252, 295)
@@ -393,15 +391,19 @@ loop = false
 
 [node name="Ui" parent="." instance=ExtResource("6_is27e")]
 
-[node name="Towers" type="Node2D" parent="."]
-position = Vector2(200, 232)
-
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Ui"]
+z_index = 4096
 offset_left = 962.0
 offset_top = 60.0
 offset_right = 1145.0
 offset_bottom = 125.0
+text = "Materials"
 label_settings = SubResource("LabelSettings_ttvbq")
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("7_2k84f")
+
+[node name="Towers" type="Node2D" parent="." groups=["TowerGroup"]]
+position = Vector2(200, 232)
 
 [connection signal="timeout" from="Path/EnemySpawner/Timer" to="Path/EnemySpawner" method="_on_timer_timeout"]
