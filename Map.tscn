@@ -394,13 +394,17 @@ loop = false
 [node name="Label" type="Label" parent="Ui"]
 z_index = 4096
 offset_left = 962.0
-offset_top = 60.0
-offset_right = 1145.0
-offset_bottom = 125.0
+offset_top = 58.0
+offset_right = 1053.0
+offset_bottom = 93.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("6_kwed8")
+theme_override_font_sizes/font_size = 5
 text = "Materials"
 label_settings = SubResource("LabelSettings_ttvbq")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 1
 script = ExtResource("7_2k84f")
 
 [node name="Towers" type="Node2D" parent="." groups=["TowerGroup"]]

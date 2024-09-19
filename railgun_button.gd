@@ -1,7 +1,9 @@
 extends Panel
 
 @onready var tower = preload("res://rail_tower.tscn")
+@onready var materials = preload("res://Map.tscn")
 var currtile
+var cost = 1000
 
 
 func _on_gui_input(event: InputEvent):
@@ -14,11 +16,14 @@ func _on_gui_input(event: InputEvent):
 		get_child(1).global_position = get_global_mouse_position()
 		#Drag
 		print(get_global_mouse_position())
+
 	elif event is InputEventMouseButton and event.button_mask == 0:
-		var path = get_tree().get_root().get_node("/root/World/Towers")
-		get_child(1).queue_free()
-		#Left Click Released
-				
-		path.add_child(temptower)
-		temptower.global_position = get_viewport().get_mouse_position()
+		if Map.materials >= cost:
+			Map.materials = Map.materials - cost
+			var path = get_tree().get_first_node_in_group("TowerGroup")
+			get_child(1).queue_free()
+			#Left Click Released
+		
+			path.add_child(temptower)
+			temptower.global_position = get_viewport().get_mouse_position()
 		#temptower.get_node("Area").hide

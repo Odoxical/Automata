@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfnywss77sb3u"]
+[gd_scene load_steps=6 format=3 uid="uid://dr1mcxpokd1fr"]
 
-[ext_resource type="Script" path="res://basic_tower.gd" id="1_ryqvh"]
-[ext_resource type="Texture2D" uid="uid://dplr5hevthw3w" path="res://Towers/Custom Sprites/Plasma_Cannon.png" id="1_yrnon"]
+[ext_resource type="Script" path="res://basic_tower.gd" id="1_r0g6b"]
+[ext_resource type="Texture2D" uid="uid://dplr5hevthw3w" path="res://Towers/Custom Sprites/Plasma_Cannon.png" id="2_mqg0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74pgj"]
 size = Vector2(32, 32)
@@ -18,7 +18,7 @@ corner_radius_bottom_left = 999
 corner_detail = 10
 
 [node name="Plasma_Cannon" type="StaticBody2D"]
-script = ExtResource("1_ryqvh")
+script = ExtResource("1_r0g6b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_74pgj")
@@ -28,7 +28,7 @@ position = Vector2(8, 0)
 
 [node name="PlasmaCannon" type="Sprite2D" parent="."]
 rotation = -1.5708
-texture = ExtResource("1_yrnon")
+texture = ExtResource("2_mqg0d")
 
 [node name="Tower" type="Area2D" parent="." groups=["Tower"]]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vbb74ytfd6qp"
-path="res://.godot/imported/Plasma_Cannon.png-92fe489e9c5f52c7f5b419342bdf2360.ctex"
+path="res://.godot/imported/Plasma_Cannon.png-bb1a088d47b31a34c071ea4f55f82c82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Diceforce_assets/Dices and Objects/Plasma_Cannon.png"
-dest_files=["res://.godot/imported/Plasma_Cannon.png-92fe489e9c5f52c7f5b419342bdf2360.ctex"]
+source_file="res://Diceforce_assets/Plasma_Cannon.png"
+dest_files=["res://.godot/imported/Plasma_Cannon.png-bb1a088d47b31a34c071ea4f55f82c82.ctex"]
 
 [params]
 

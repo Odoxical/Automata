@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxlr73143154b"]
 
-[ext_resource type="Texture2D" uid="uid://vbb74ytfd6qp" path="res://Diceforce_assets/Dices and Objects/Plasma_Cannon.png" id="1_7yeuu"]
+[ext_resource type="Texture2D" uid="uid://vbb74ytfd6qp" path="res://Diceforce_assets/Plasma_Cannon.png" id="1_7yeuu"]
 
 [node name="Plasma_Button" type="Panel"]
 custom_minimum_size = Vector2(40, 40)

@@ -1,6 +1,6 @@
 extends Panel
 
-@onready var tower = preload("res://basic_tower.tscn")
+@onready var tower = preload("res://Plasma_Cannon.tscn")
 @onready var materials = preload("res://Map.tscn")
 
 
@@ -17,10 +17,13 @@ func _on_gui_input(event: InputEvent):
 		get_child(1).global_position = get_global_mouse_position()
 		#Drag
 	elif event is InputEventMouseButton and event.button_mask == 0:
+		
 		if Map.materials >= 500:
 			Map.materials = Map.materials - cost
+			#cost
 			var path = get_tree().get_first_node_in_group("TowerGroup")
 			get_child(1).queue_free()
+			#Placement
 			#Left Click Released
 		
 			path.add_child(temptower)
