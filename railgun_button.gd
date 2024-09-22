@@ -1,9 +1,9 @@
 extends Panel
 
-@onready var tower = preload("res://rail_tower.tscn")
+@onready var tower = preload("res://flamethrower_tower.tscn")
 @onready var materials = preload("res://Map.tscn")
 var currtile
-var cost = 1000
+var cost = 1200
 
 
 func _on_gui_input(event: InputEvent):

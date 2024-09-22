@@ -1,9 +1,9 @@
 extends Area2D
 
 var target
-var speed = 500
+var speed = 250
 var path_name = ""
-var bullet_damage = 50
+var bullet_damage = 15
 
 func _physics_process(delta):
 	translate(transform.x * speed * delta)

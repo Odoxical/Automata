@@ -2,10 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ot832vf2y3xf" path="res://Diceforce_assets/Tiles/UI_board-Sheet.png" id="1_e87gl"]
 [ext_resource type="PackedScene" uid="uid://bac6h45q8sef" path="res://plasma_cannon_Button.tscn" id="2_7bsjr"]
+[ext_resource type="PackedScene" uid="uid://c6l7rglwmk5s4" path="res://flamethrower_button.tscn" id="3_dqqrk"]
 [ext_resource type="PackedScene" uid="uid://c145t4doig6vo" path="res://railgun_button.tscn" id="3_wsr8r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0k8o"]
-size = Vector2(57, 57)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -15,9 +13,9 @@ scale = Vector2(1.8, 1.8)
 texture = ExtResource("1_e87gl")
 
 [node name="FlowContainer" type="FlowContainer" parent="."]
-offset_left = 726.0
+offset_left = 723.0
 offset_top = 64.0
-offset_right = 845.0
+offset_right = 844.0
 offset_bottom = 104.0
 scale = Vector2(1.5, 1.5)
 theme_override_constants/h_separation = 10
@@ -27,16 +25,13 @@ theme_override_constants/v_separation = 10
 custom_minimum_size = Vector2(30, 40)
 layout_mode = 2
 
+[node name="Flamethrower_Button" parent="FlowContainer" instance=ExtResource("3_dqqrk")]
+custom_minimum_size = Vector2(27, 40)
+layout_mode = 2
+
 [node name="Railgun_Button" parent="FlowContainer" instance=ExtResource("3_wsr8r")]
 custom_minimum_size = Vector2(30, 40)
 layout_mode = 2
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(905, 89.0001)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-148.5, 5.49994)
-shape = SubResource("RectangleShape2D_m0k8o")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 40.0
