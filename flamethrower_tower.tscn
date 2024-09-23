@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7jd60wdxb4nb"]
 
 [ext_resource type="Script" path="res://plasma_cannon.gd" id="1_5yuam"]
-[ext_resource type="Texture2D" uid="uid://b8rah0wp3y2ss" path="res://Towers/Custom Sprites/Flamethrower_tower.png" id="2_gjhrk"]
+[ext_resource type="Texture2D" uid="uid://b8rah0wp3y2ss" path="res://Customised_Sprites/Custom Sprites/Flamethrower_tower.png" id="2_gjhrk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74pgj"]
 size = Vector2(32, 32)
@@ -34,7 +34,7 @@ shape = SubResource("CircleShape2D_rs35s")
 [node name="bulletcontainer" type="Node" parent="."]
 
 [node name="ShootTimer" type="Timer" parent="." groups=["Tower"]]
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 
 [node name="Area" type="Panel" parent="."]

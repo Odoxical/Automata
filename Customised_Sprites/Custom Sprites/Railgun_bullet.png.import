@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8rah0wp3y2ss"
-path="res://.godot/imported/Flamethrower_tower.png-c6a633bce8bf25f709caf516f61635be.ctex"
+uid="uid://bqk8ywn5pe2e0"
+path="res://.godot/imported/Railgun_bullet.png-ed7636e8f32fc3946199e29848cb45e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Towers/Custom Sprites/Flamethrower_tower.png"
-dest_files=["res://.godot/imported/Flamethrower_tower.png-c6a633bce8bf25f709caf516f61635be.ctex"]
+source_file="res://Customised_Sprites/Custom Sprites/Railgun_bullet.png"
+dest_files=["res://.godot/imported/Railgun_bullet.png-ed7636e8f32fc3946199e29848cb45e5.ctex"]
 
 [params]
 

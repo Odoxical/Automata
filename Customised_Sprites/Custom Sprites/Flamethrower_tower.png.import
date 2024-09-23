@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dplr5hevthw3w"
-path="res://.godot/imported/Plasma_Cannon.png-92e7df136fa2f78630f470224a3ad5b5.ctex"
+uid="uid://b8rah0wp3y2ss"
+path="res://.godot/imported/Flamethrower_tower.png-6529492bc852568f1c7c973aa70a2c41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Towers/Custom Sprites/Plasma_Cannon.png"
-dest_files=["res://.godot/imported/Plasma_Cannon.png-92e7df136fa2f78630f470224a3ad5b5.ctex"]
+source_file="res://Customised_Sprites/Custom Sprites/Flamethrower_tower.png"
+dest_files=["res://.godot/imported/Flamethrower_tower.png-6529492bc852568f1c7c973aa70a2c41.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c145t4doig6vo"]
 
 [ext_resource type="Script" path="res://railgun_button.gd" id="1_rg6w8"]
-[ext_resource type="Texture2D" uid="uid://dds2vguox53kf" path="res://Towers/Custom Sprites/Railgun _tower.png" id="2_onjea"]
+[ext_resource type="Texture2D" uid="uid://dds2vguox53kf" path="res://Customised_Sprites/Custom Sprites/Railgun _tower.png" id="2_onjea"]
 
 [node name="Railgun_Button" type="Panel"]
 custom_minimum_size = Vector2(40, 40)

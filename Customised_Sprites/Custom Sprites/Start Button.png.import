@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqk8ywn5pe2e0"
-path="res://.godot/imported/Railgun_bullet.png-a4289e76cbfb0c0df860e48227eeec3c.ctex"
+uid="uid://cds88gocjujdx"
+path="res://.godot/imported/Start Button.png-61bbdf7da7c3fe44c65aa75b0de6dfad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Towers/Custom Sprites/Railgun_bullet.png"
-dest_files=["res://.godot/imported/Railgun_bullet.png-a4289e76cbfb0c0df860e48227eeec3c.ctex"]
+source_file="res://Customised_Sprites/Custom Sprites/Start Button.png"
+dest_files=["res://.godot/imported/Start Button.png-61bbdf7da7c3fe44c65aa75b0de6dfad.ctex"]
 
 [params]
 

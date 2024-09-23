@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dds2vguox53kf"
-path="res://.godot/imported/Railgun _tower.png-2a4d1275bcebaf4ed6dd879e3b4f81ad.ctex"
+uid="uid://nevydo2uekap"
+path="res://.godot/imported/Plasma_Bullet.png-5438c78285625da4f625d15e7593176a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Towers/Custom Sprites/Railgun _tower.png"
-dest_files=["res://.godot/imported/Railgun _tower.png-2a4d1275bcebaf4ed6dd879e3b4f81ad.ctex"]
+source_file="res://Customised_Sprites/Custom Sprites/Plasma_Bullet.png"
+dest_files=["res://.godot/imported/Plasma_Bullet.png-5438c78285625da4f625d15e7593176a.ctex"]
 
 [params]
 

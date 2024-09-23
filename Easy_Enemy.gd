@@ -9,10 +9,10 @@ var Biomass = 100
 func _process(delta):
 	var progress = get_parent().get_progress() # Get the current progress
 	get_parent().set_progress(progress + (speed * delta)) # Update the progress
-
-	if get_parent().get_progress_ratio() == 1:
+	print("Before the if",Map.Energy)
+	if (get_parent().get_progress_ratio())>=0.99:
 		Map.Energy = Map.Energy - Damage
-		print(Energy)
+		print(Map.Energy)
 		queue_free()
 
 	if health <= 0:

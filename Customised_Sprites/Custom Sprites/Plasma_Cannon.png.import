@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nevydo2uekap"
-path="res://.godot/imported/Plasma_Bullet.png-32dec6744364b9e06beea126d4bde476.ctex"
+uid="uid://dplr5hevthw3w"
+path="res://.godot/imported/Plasma_Cannon.png-0c5cc6b14dabf2e15f67b93d2468a0f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Towers/Custom Sprites/Plasma_Bullet.png"
-dest_files=["res://.godot/imported/Plasma_Bullet.png-32dec6744364b9e06beea126d4bde476.ctex"]
+source_file="res://Customised_Sprites/Custom Sprites/Plasma_Cannon.png"
+dest_files=["res://.godot/imported/Plasma_Cannon.png-0c5cc6b14dabf2e15f67b93d2468a0f6.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://deudovnpoj6uq"]
 
 [ext_resource type="Script" path="res://rail_tower.gd" id="1_cinqb"]
-[ext_resource type="Texture2D" uid="uid://dds2vguox53kf" path="res://Towers/Custom Sprites/Railgun _tower.png" id="2_dhlfc"]
+[ext_resource type="Texture2D" uid="uid://dds2vguox53kf" path="res://Customised_Sprites/Custom Sprites/Railgun _tower.png" id="2_dhlfc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74pgj"]
 size = Vector2(32, 32)

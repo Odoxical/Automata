@@ -1,7 +1,7 @@
 extends Node2D
 
 var BULLET = preload("res://flame_burst.tscn")
-var bullet_damage = 15
+var bullet_damage = 12
 var path_name
 var current_targets = [] #targets in range
 var current #curently attacking

@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6l7rglwmk5s4"]
 
-[ext_resource type="Script" path="res://railgun_button.gd" id="1_lmvfi"]
-[ext_resource type="Texture2D" uid="uid://b8rah0wp3y2ss" path="res://Towers/Custom Sprites/Flamethrower_tower.png" id="2_btltc"]
+[ext_resource type="Script" path="res://flamethrower_button.gd" id="1_ye7ut"]
+[ext_resource type="Texture2D" uid="uid://b8rah0wp3y2ss" path="res://Customised_Sprites/Custom Sprites/Flamethrower_tower.png" id="2_btltc"]
 
 [node name="Flamethrower_Button" type="Panel"]
 custom_minimum_size = Vector2(40, 40)
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_lmvfi")
+script = ExtResource("1_ye7ut")
 
 [node name="FlamethrowerTower" type="Sprite2D" parent="."]
 position = Vector2(20, 20)
