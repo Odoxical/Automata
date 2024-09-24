@@ -17,10 +17,10 @@ func _on_gui_input(event: InputEvent):
 		get_child(1).global_position = get_global_mouse_position()
 		#Drag
 	elif event is InputEventMouseButton and event.button_mask == 0:
-		
 		if Map.materials >= 500:
 			Map.materials = Map.materials - cost
 			#cost
+			
 			var path = get_tree().get_first_node_in_group("TowerGroup")
 			get_child(1).queue_free()
 			#Placement

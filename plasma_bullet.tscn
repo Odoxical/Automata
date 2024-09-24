@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://n0xaar576bh5"]
 
-[ext_resource type="Texture2D" uid="uid://nevydo2uekap" path="res://Towers/Custom Sprites/Plasma_Bullet.png" id="1_2jyfh"]
+[ext_resource type="Texture2D" uid="uid://nevydo2uekap" path="res://Customised_Sprites/Custom Sprites/Plasma_Bullet.png" id="1_2jyfh"]
 [ext_resource type="Script" path="res://plasma_bullet.gd" id="1_dnt1f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbvce"]

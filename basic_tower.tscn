@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfnywss77sb3u"]
 
 [ext_resource type="Script" path="res://basic_tower.gd" id="1_ryqvh"]
-[ext_resource type="Texture2D" uid="uid://dplr5hevthw3w" path="res://Towers/Custom Sprites/Plasma_Cannon.png" id="1_yrnon"]
+[ext_resource type="Texture2D" uid="uid://dplr5hevthw3w" path="res://Customised_Sprites/Custom Sprites/Plasma_Cannon.png" id="1_yrnon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74pgj"]
 size = Vector2(32, 32)
