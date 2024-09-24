@@ -12,7 +12,6 @@ func _process(delta):
 	print("Before the if",Map.Energy)
 	if (get_parent().get_progress_ratio())>=0.99:
 		Map.Energy = Map.Energy - Damage
-		print(Map.Energy)
 		queue_free()
 
 	if health <= 0:
