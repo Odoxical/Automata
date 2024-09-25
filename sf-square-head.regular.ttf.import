@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b286s3ci6iium"
-path="res://.godot/imported/Galaksinos-RpOle.ttf-a37ba2e2c77e6bd7cce94970747eaef4.fontdata"
+uid="uid://dsrtrts3ykbpk"
+path="res://.godot/imported/sf-square-head.regular.ttf-ee498c53c8fa95b03133f0a3491e7db1.fontdata"
 
 [deps]
 
-source_file="res://galaksinos-font/Galaksinos-RpOle.ttf"
-dest_files=["res://.godot/imported/Galaksinos-RpOle.ttf-a37ba2e2c77e6bd7cce94970747eaef4.fontdata"]
+source_file="res://sf-square-head.regular.ttf"
+dest_files=["res://.godot/imported/sf-square-head.regular.ttf-ee498c53c8fa95b03133f0a3491e7db1.fontdata"]
 
 [params]
 

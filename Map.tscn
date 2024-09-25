@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://cep2eh2vi3mhh"]
+[gd_scene load_steps=13 format=3 uid="uid://cep2eh2vi3mhh"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_iyr6t"]
 [ext_resource type="Texture2D" uid="uid://cv0dm2csf34k8" path="res://Diceforce_assets/Tiles/Tiles+Corner.png" id="2_okl61"]
 [ext_resource type="PackedScene" uid="uid://dcxodahotd8ac" path="res://Easy_Enemy.tscn" id="3_awxaa"]
 [ext_resource type="Script" path="res://Enemy Spawner.gd" id="4_e3tx0"]
 [ext_resource type="PackedScene" uid="uid://bgtekx7n5piwb" path="res://Ui.tscn" id="6_is27e"]
-[ext_resource type="FontFile" uid="uid://b286s3ci6iium" path="res://galaksinos-font/Galaksinos-RpOle.ttf" id="6_kwed8"]
+[ext_resource type="FontFile" path="res://galaksinos-font/Galaksinos-RpOle.ttf" id="6_kwed8"]
 [ext_resource type="Script" path="res://label.gd" id="7_2k84f"]
+[ext_resource type="FontFile" uid="uid://dsrtrts3ykbpk" path="res://sf-square-head.regular.ttf" id="7_nv8ce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_64s11"]
 texture = ExtResource("2_okl61")
@@ -348,7 +349,8 @@ _data = {
 point_count = 13
 
 [sub_resource type="LabelSettings" id="LabelSettings_ttvbq"]
-font = ExtResource("6_kwed8")
+font = ExtResource("7_nv8ce")
+font_size = 29
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_iyr6t")
@@ -399,11 +401,10 @@ loop = false
 z_index = 4096
 offset_left = 962.0
 offset_top = 58.0
-offset_right = 1053.0
-offset_bottom = 93.0
-scale = Vector2(2, 2)
+offset_right = 1141.0
+offset_bottom = 126.0
 theme_override_fonts/font = ExtResource("6_kwed8")
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 20
 text = "Materials"
 label_settings = SubResource("LabelSettings_ttvbq")
 horizontal_alignment = 1
@@ -414,5 +415,10 @@ script = ExtResource("7_2k84f")
 [node name="Towers" type="Node2D" parent="." groups=["TowerGroup"]]
 position = Vector2(200, 232)
 
+[node name="Death Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="timeout" from="Path/EnemySpawner/BasicEnemy" to="Path/EnemySpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path/EnemySpawner/Exponential" to="Path/EnemySpawner" method="_on_exponential_timeout"]
+[connection signal="timeout" from="Death Timer" to="." method="_on_death_timer_timeout"]
