@@ -3,3 +3,6 @@ Make enemys ramp up
 Make Towers blip out of existance.
 Fix error with start butto malfunctioning after loss.
 fix held towers seemingly having more range
+
+After Death, Start button refused to function. 
+After some troubleshooting, I realised that this error was caused by your health not beieng reset after death, making it so imedeitly after you clicked the button and were transported to the level, it would detect that you had 0/>0 HP and would force you back to the title screen.

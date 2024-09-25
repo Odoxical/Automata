@@ -7,7 +7,7 @@
 
 [sub_resource type="TileSet" id="TileSet_r4mpl"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Title" type="Node2D"]
 position = Vector2(42, 76)
 script = ExtResource("1_fjtr3")
 
@@ -17,7 +17,7 @@ offset_top = 564.0
 offset_right = 1154.0
 offset_bottom = 655.0
 
-[node name="StartButtonS" type="Sprite2D" parent="StartButton"]
+[node name="StartButtonSprite" type="Sprite2D" parent="StartButton"]
 position = Vector2(157, 43)
 texture = ExtResource("4_c8e3j")
 
