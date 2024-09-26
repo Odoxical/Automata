@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cep2eh2vi3mhh"]
+[gd_scene load_steps=12 format=3 uid="uid://cep2eh2vi3mhh"]
 
-[ext_resource type="Script" path="res://map.gd" id="1_iyr6t"]
+[ext_resource type="Script" path="res://level.gd" id="1_5w1j1"]
 [ext_resource type="Texture2D" uid="uid://cv0dm2csf34k8" path="res://Diceforce_assets/Tiles/Tiles+Corner.png" id="2_okl61"]
 [ext_resource type="PackedScene" uid="uid://dcxodahotd8ac" path="res://Easy_Enemy.tscn" id="3_awxaa"]
 [ext_resource type="Script" path="res://Enemy Spawner.gd" id="4_e3tx0"]
 [ext_resource type="PackedScene" uid="uid://bgtekx7n5piwb" path="res://Ui.tscn" id="6_is27e"]
-[ext_resource type="FontFile" path="res://galaksinos-font/Galaksinos-RpOle.ttf" id="6_kwed8"]
 [ext_resource type="Script" path="res://label.gd" id="7_2k84f"]
 [ext_resource type="FontFile" uid="uid://dsrtrts3ykbpk" path="res://sf-square-head.regular.ttf" id="7_nv8ce"]
 
@@ -353,7 +352,7 @@ font = ExtResource("7_nv8ce")
 font_size = 29
 
 [node name="Map" type="Node2D"]
-script = ExtResource("1_iyr6t")
+script = ExtResource("1_5w1j1")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(252, 295)
@@ -373,11 +372,12 @@ curve = SubResource("Curve2D_6uowp")
 position = Vector2(-224.958, 6)
 script = ExtResource("4_e3tx0")
 
-[node name="BasicEnemy" type="Timer" parent="Path/EnemySpawner"]
+[node name="Benemy" type="Timer" parent="Path/EnemySpawner"]
 wait_time = 0.5
 autostart = true
 
-[node name="Exponential" type="Timer" parent="Path/EnemySpawner"]
+[node name="Benemy ramp" type="Timer" parent="Path/EnemySpawner"]
+autostart = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path"]
 position = Vector2(-350.957, 72.0003)
@@ -403,7 +403,6 @@ offset_left = 962.0
 offset_top = 58.0
 offset_right = 1141.0
 offset_bottom = 126.0
-theme_override_fonts/font = ExtResource("6_kwed8")
 theme_override_font_sizes/font_size = 20
 text = "Materials"
 label_settings = SubResource("LabelSettings_ttvbq")
@@ -419,6 +418,6 @@ position = Vector2(200, 232)
 wait_time = 0.1
 one_shot = true
 
-[connection signal="timeout" from="Path/EnemySpawner/BasicEnemy" to="Path/EnemySpawner" method="_on_timer_timeout"]
-[connection signal="timeout" from="Path/EnemySpawner/Exponential" to="Path/EnemySpawner" method="_on_exponential_timeout"]
+[connection signal="timeout" from="Path/EnemySpawner/Benemy" to="Path/EnemySpawner" method="_on_benemy_timeout"]
+[connection signal="timeout" from="Path/EnemySpawner/Benemy ramp" to="." method="_on_benemy_ramp_timeout"]
 [connection signal="timeout" from="Death Timer" to="." method="_on_death_timer_timeout"]

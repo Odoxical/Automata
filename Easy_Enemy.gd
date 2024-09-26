@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 1500
+@export var speed = 150
 @onready var Energy = preload("res://Map.tscn")
 var health = 100
 var Damage = 20
