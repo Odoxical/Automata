@@ -1,7 +1,6 @@
 Make something to show tower stats.
 Make enemys ramp up
 Make Towers blip out of existance.
-Fix error with start butto malfunctioning after loss.
 fix held towers seemingly having more range
 
 After Death, Start button refused to function. 
