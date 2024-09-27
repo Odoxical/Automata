@@ -414,10 +414,5 @@ script = ExtResource("7_2k84f")
 [node name="Towers" type="Node2D" parent="." groups=["TowerGroup"]]
 position = Vector2(200, 232)
 
-[node name="Death Timer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
 [connection signal="timeout" from="Path/EnemySpawner/Benemy" to="Path/EnemySpawner" method="_on_benemy_timeout"]
 [connection signal="timeout" from="Path/EnemySpawner/Benemy ramp" to="." method="_on_benemy_ramp_timeout"]
-[connection signal="timeout" from="Death Timer" to="." method="_on_death_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cfk77cx6mw2pr"]
+[gd_scene load_steps=14 format=4 uid="uid://cfk77cx6mw2pr"]
 
 [ext_resource type="Script" path="res://title.gd" id="1_fjtr3"]
 [ext_resource type="Texture2D" uid="uid://cr3nh2eohl6bj" path="res://Customised_Sprites/Custom Sprites/Exit Button.png" id="3_a7dc4"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cds88gocjujdx" path="res://Customised_Sprites/Custom Sprites/Start Button.png" id="4_c8e3j"]
 [ext_resource type="Texture2D" uid="uid://crtpy48rq1gm6" path="res://Towers/Custom Sprites/Title.png" id="4_h7641"]
 [ext_resource type="Texture2D" uid="uid://4q56ujs4w7mq" path="res://Tiles+TEvenBetter.png" id="5_oid4b"]
-[ext_resource type="Script" path="res://Easy_Enemy.gd" id="7_atwm2"]
 [ext_resource type="PackedScene" uid="uid://dcxodahotd8ac" path="res://Easy_Enemy.tscn" id="8_4xovf"]
+[ext_resource type="PackedScene" uid="uid://cho3eso3k050i" path="res://Fast_Boy.tscn" id="8_natsc"]
+[ext_resource type="PackedScene" uid="uid://4pwun8wo52hs" path="res://strong_boy.tscn" id="9_k42bt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnla0"]
 texture = ExtResource("5_oid4b")
@@ -368,9 +369,20 @@ curve = SubResource("Curve2D_1a4x8")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(114, -51)
 rotation = 1.59163
-script = ExtResource("7_atwm2")
 
 [node name="CharacterBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("8_4xovf")]
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
+position = Vector2(114, -51)
+rotation = 1.59163
+
+[node name="Fast_Boy" parent="Path2D/PathFollow2D2" instance=ExtResource("8_natsc")]
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D"]
+position = Vector2(114, -51)
+rotation = 1.59163
+
+[node name="Strong_Boy" parent="Path2D/PathFollow2D3" instance=ExtResource("9_k42bt")]
 
 [connection signal="gui_input" from="StartButton" to="." method="_on_start_button_gui_input"]
 [connection signal="gui_input" from="Exit Button" to="." method="_on_exit_button_gui_input"]

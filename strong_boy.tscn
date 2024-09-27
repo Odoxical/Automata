@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://4pwun8wo52hs"]
+
+[ext_resource type="Script" path="res://fast_boy.gd" id="1_6ieh0"]
+[ext_resource type="Texture2D" uid="uid://0q03ruvun8s8" path="res://kenney_pixel-platformer (1)/Tiles/Characters/tile_0005.png" id="2_rav4j"]
+[ext_resource type="Texture2D" uid="uid://bxgtyufeo6klo" path="res://kenney_pixel-platformer (1)/Tiles/Characters/tile_0004.png" id="3_5w34s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxkfk"]
+radius = 15.1327
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlp2i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rav4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5w34s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Strong_Boy" type="CharacterBody2D" groups=["Easy_Enemy", "Enemy"]]
+script = ExtResource("1_6ieh0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_cxkfk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cxkfk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_xlp2i")
+autoplay = "default"
+frame_progress = 0.200258
+speed_scale = 0.5
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
